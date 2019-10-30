@@ -33,7 +33,7 @@ watcher.on('event', (e) => {
 	const code = e.code
 	if (e.code == 'END') {
 		console.log('Build successful.')
-	} else if (e.code == 'ERROR')
+	} else if (e.code == 'ERROR') {
 		console.log('Error description:')
 		console.log(e)
 	}
