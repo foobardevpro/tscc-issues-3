@@ -1,0 +1,6 @@
+{
+	"modules": {
+		"dist/js/main": "src/main.ts"
+	},
+	"prefix": "./"
+}
