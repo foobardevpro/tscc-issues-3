@@ -25,15 +25,15 @@ const watcher = rollup.watch({
 		}),
 	],
 	watch: {
-		chokidar: true // make rollup use chokidar, since it's already installed for stylus watch, and it's more reliable anyway
+		chokidar: true
 	}
 })
 
-watcher.on('event', (e) => { // prints build errors
-	const code = e.code // 'START' | 'END' | 'BUNDLE_START' | 'BUNDLE_END' | 'ERROR'
+watcher.on('event', (e) => {
+	const code = e.code
 	if (e.code == 'END') {
 		console.log('Build successful.')
-	} else if (e.code == 'ERROR') { // is ERROR the only event I should be worried about?
+	} else if (e.code == 'ERROR')
 		console.log('Error description:')
 		console.log(e)
 	}
